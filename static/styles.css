@@ -20,18 +20,12 @@ body {
     border-radius: 100px;
 }
 
-.search-item {
+/*.search-item {
     background-color: white;
     border-radius: 2px;
     border-color: black;
-}
-
-#button-div {
-    display: block;
-    float: right;
-}
-
-
+    padding: 10px 5px 10px 5px;
+}*/
 
 @keyframes gradient {
 	0% {
@@ -114,3 +108,18 @@ body {
         transform: translateY(0px);
     }
 }
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.search-box > div {
+    background-color: black;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
