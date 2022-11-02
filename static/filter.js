@@ -3,7 +3,9 @@ function addFilterItem() {
 
     div.className = 'search-item';
     
-    currContent = document.getElementById('current_search_item')
+    currContent = document.getElementById('current_search_item').value
 
-    div.innerHTML = currContent;
+    div.innerHTML = '<p>' + currContent + '</p>' ;
+    document.getElementById('search_box').appendChild(div);
+    console.log('working')
 }
