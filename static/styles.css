@@ -114,9 +114,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column;
     
 }
 
 #file-submit {
     margin-top: 0px;
+}
+
+.error {
+    font-size: medium;
+    color: black;
 }
