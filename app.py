@@ -26,4 +26,5 @@ def upload():
 
 @app.route("/results", methods=['POST'])
 def results():
+    return render_template("results.html")
     
