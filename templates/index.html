@@ -8,12 +8,13 @@
     <div class="container">
         <div class="row">
           <div class="col-9">
-            <div class="search-box">
+            <div class="search-box" id='search_box'>
             </div>
-            <div>
-            <label for="filter">Filter:</label>
-            <input type="text" id="current_search_item" name="filter"><br><br>
-            <button type="button" onclick="addFilterItem()">Click Me!</button>
+            <div style='margin-top: 20px;'>
+                <label for="filter">Filter:</label>
+                <input type="text" id="current_search_item" name="filter"><br><br>
+                <button type="button" onclick="addFilterItem()">Click Me!</button>
+            </div>
           </div>
           <div class="col-3 text-right" style="padding-right:100px;">
                 <a href="/upload" class="btn btn-white btn-animate">Upload File  &#8594;</a>
