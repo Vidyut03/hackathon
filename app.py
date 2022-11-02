@@ -23,3 +23,7 @@ def upload():
         return render_template("upload.html", err=err)
     else:        
         return render_template("upload.html", err=err)
+
+@app.route("/results", methods=['POST'])
+def results():
+    
