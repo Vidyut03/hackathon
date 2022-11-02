@@ -1,4 +1,4 @@
-CREATE TABLE `PartInformation` (
+CREATE TABLE IF NOT Exists `PartInformation` (
   `Index` INT,
   `WorkOrder` INT,
   `PartNumber` VARCHAR,
@@ -13,7 +13,7 @@ CREATE TABLE `PartInformation` (
   `EntryName` PK
 );
 
-CREATE TABLE `RunDetails` (
+CREATE TABLE IF NOT EXISTS `RunDetails` (
   `FileName` VARCHAR,
   `FilePath` VARCHAR,
   `LoadNumber` INT,
