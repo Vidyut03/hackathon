@@ -5,12 +5,18 @@
 
 {% block body %}
     <div class="upload-form mb-3">
-        <form  action="/upload-file" method="post" enctype="multipart/form-data" accept=".json">
-            <input class="form-control" type="file" name="json_file">  
-            <input class="btn btn-primary" id="file-submit" type="submit">
+        <div>
+            <form  action="/upload-file" method="post" enctype="multipart/form-data" accept=".json">
+                <input class="form-control" type="file" name="json_file">  
+                <input class="btn btn-primary" id="file-submit" type="submit">
         </form>
+        </div>
+        <br>
+        <div>
+        {% if err != "" %}
+            <p class="error">{{ err }}</p>
+        {% endif %}
+        </div>
     </div>
-{% if err != "" %}
-    <p>{{ err }}</p>
-{% endif %}
+
 {% endblock %}
