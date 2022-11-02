@@ -23,3 +23,9 @@ def upload():
         return render_template("upload.html", err=err)
     else:        
         return render_template("upload.html", err=err)
+
+@app.route('/handle_data', methods=['POST'])
+def handle_data():
+    filter = request.form['filterString']
+    #Filter String will look like "Filter1:Filter2:Filter3" which can be parsed to create Sql String
+    return render_template("index.html", filterString = filter)
