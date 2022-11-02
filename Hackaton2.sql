@@ -10,7 +10,7 @@ CREATE TABLE IF NOT Exists `PartInformation` (
   `PartTCs` VARCHAR,
   `PartProbes` VARCHAR,
   `OtherSensors` VARCHAR,
-  `EntryName` PK
+  `EntryName` VARCHAR, PK
 );
 
 CREATE TABLE IF NOT EXISTS `RunDetails` (
@@ -24,5 +24,6 @@ CREATE TABLE IF NOT EXISTS `RunDetails` (
   `RunDuration` VARCHAR,
   `OperatorName` VARCHAR,
   `ExportControl` VARCHAR,
-  `EntryName` PK
+  `EntryName`VARCHAR, PK
 );
+ 
