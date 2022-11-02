@@ -5,16 +5,18 @@
 
 {% block body %}
 <div class="main-body">
-    <div class="container main-content">
+    <div class="container">
         <div class="row">
           <div class="col-9">
             <div class="search-box">
-                <div class="search-item">Search</div>
             </div>
+            <div>
+            <label for="filter">Filter:</label>
+            <input type="text" id="current_search_item" name="filter"><br><br>
             <button type="button" onclick="addFilterItem()">Click Me!</button>
           </div>
           <div class="col-3 text-right" style="padding-right:100px;">
-                <a href="#" class="btn btn-white btn-animate">Upload File  &#8594;</a>
+                <a href="/upload" class="btn btn-white btn-animate">Upload File  &#8594;</a>
           </div>
         </div>
       </div>
