@@ -12,7 +12,6 @@ body {
 }
 
 .search-box {
-    margin-top: 100px;
     background-color: white;
     display: flex;
     height: 50px;
@@ -126,3 +125,21 @@ body {
     font-size: medium;
     color: black;
 }
+
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    color: white !important;
+  }
+
+  .btn-right {
+    float: right;
+    margin-top: 10px;
+  }

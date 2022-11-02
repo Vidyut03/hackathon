@@ -8,12 +8,13 @@
     <div class="container">
         <div class="row">
           <div class="col-9">
+            <h2 style="margin-top: 100px;">Find Item by search term</h2>
             <div class="search-box" id='search_box'>
             </div>
             <div style='margin-top: 20px;'>
-                <label for="filter">Filter:</label>
-                <input type="text" id="current_search_item" name="filter"><br><br>
-                <button type="button" onclick="addFilterItem()">Click Me!</button>
+                <input type="text" id="current_search_item" name="filter">
+                <button class="btn btn-animate" type="button" onclick="addFilterItem()" name="filter">Add Filter Term</button>
+                <button class="btn btn-animate btn-right" type="button" onclick="addFilterItem()" name="submit">Search</button>
             </div>
           </div>
           <div class="col-3 text-right" style="padding-right:100px;">
