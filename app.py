@@ -24,6 +24,9 @@ def upload():
     else:        
         return render_template("upload.html", err=err)
 
+@app.route("/results", methods=['POST'])
+def results():
+    
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
     filter = request.form['filterString']
