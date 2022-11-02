@@ -1,3 +1,6 @@
+html, body{
+    height: 100%;
+}
 p {
     color: green;
 }
@@ -112,4 +115,26 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.search-box > div {
+    background-color: black;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+  .upload-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }

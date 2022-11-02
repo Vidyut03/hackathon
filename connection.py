@@ -11,21 +11,13 @@ def create_connection(db):
   
   return conn
 
-def create_table(conn, statement):
-  try:
-    c = conn.cursor()
-    c = c.execute(statement)
-  except Error as e:
-    print('Error:', e)
-
 def main():
-  db = '/home/mohish/studio2/hackathon/hackathon/db/tmp.db'
-  create_run_details_table = open('run_details.sql', 'r').read()
-  # create_part_info_table = open('part_info.sql', 'r').read()
+  db = 'db/tmp.db'
+  f = open('Hackathon2.sql', 'r')
   conn = create_connection(db)
   if conn:
     create_table(conn, create_run_details_table)
-    create_table(conn, create_part_info_table)
+    # create_table(conn, create_part_info_table)
   else:
     print('DB connection failed')
 

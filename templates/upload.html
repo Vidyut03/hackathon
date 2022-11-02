@@ -4,11 +4,12 @@
 {% endblock %}
 
 {% block body %}
-    <form action="/upload-file" method="post" enctype="multipart/form-data" accept=".json">
-        <input type="file" name="json_file">  
-        <input type="submit">
-    </form>
-
+    <div class="upload-form">
+        <form  action="/upload-file" method="post" enctype="multipart/form-data" accept=".json">
+            <input type="file" name="json_file">  
+            <input type="submit">
+        </form>
+    </div>
 {% if err != "" %}
     <p>{{ err }}</p>
 {% endif %}
