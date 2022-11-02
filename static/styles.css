@@ -132,9 +132,14 @@ body {
     font-size: 30px;
   }
 
-  .upload-form {
+.upload-form {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    
+}
+
+#file-submit {
+    margin-top: 0px;
 }

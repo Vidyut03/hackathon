@@ -4,10 +4,10 @@
 {% endblock %}
 
 {% block body %}
-    <div class="upload-form">
+    <div class="upload-form mb-3">
         <form  action="/upload-file" method="post" enctype="multipart/form-data" accept=".json">
-            <input type="file" name="json_file">  
-            <input type="submit">
+            <input class="form-control" type="file" name="json_file">  
+            <input class="btn btn-primary" id="file-submit" type="submit">
         </form>
     </div>
 {% if err != "" %}
