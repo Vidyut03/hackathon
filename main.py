@@ -2,6 +2,7 @@ import sqlite3 as sql
 from sqlite3 import Error
 import os
 import json
+import requests
 
 def create_connection(db):
   conn = None

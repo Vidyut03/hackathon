@@ -10,19 +10,20 @@ function addFilterItem() {
     
     cookie = getCookie("filterStr")
 
-    console.log(cookie)
-
     if (cookie == "" || cookie == null) {
         var date = new Date();
         date.setDate(date.getDate() + 1);
         string = ""
-        string += currContent + ';'
+        string += currContent + ':'
         document.cookie = "filterStr=" + string + '; expires=' + date
     }
     else {
-        string += currContent + ';'
+        string += currContent + ':'
         document.cookie = "filterStr=" + string
     } 
+    document.getElementById('filterString').value = string
+    console.log(document.getElementById('filterString').value)
+
 }
  
 function getCookie(cname) {
@@ -42,6 +43,13 @@ function getCookie(cname) {
   }
 
 function delete_cookie() {
+    document.cookie = 'filterStr=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function onSubmitButtonClick() {
+    $.post( "/postmethod", {
+        javascript_data: data 
+    });
     document.cookie = 'filterStr=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
   
