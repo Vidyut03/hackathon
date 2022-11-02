@@ -10,12 +10,16 @@ def index():
 
 @app.route("/upload-file", methods=['GET','POST'])
 def upload():
+    err = ""
     if request.method == "POST":
-        #f_name = request.form.get()
-        #f = request.files.get("json_file")
         f = request.files["json_file"]
-        a = json.load(f)
-        print(a)
-        return redirect("/")
+        if f is None:
+            err = "Error: No file provided"
+        elif f.filename[-5:] not in [".json", ".JSON"]:
+            err = "Error: File need to be of json format"
+        else:
+            a = json.load(f)
+            # print(a)
+        return render_template("upload.html", err=err)
     else:        
-        return render_template("upload.html")
+        return render_template("upload.html", err=err)
