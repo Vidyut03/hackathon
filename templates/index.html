@@ -12,10 +12,10 @@
             <div class="search-box" id='search_box'>
             </div>
             <div style='margin-top: 20px;'>
-              <form action="/handle_data" method="post">
+              <form action="/results" method="post">
                 <input type="text" id="current_search_item" name="filter">
                 <button class="btn btn-animate" type="button" onclick="addFilterItem()" name="filter">Add Filter Term</button>
-                <form action="{{ url_for('handle_data') }}" method="post">
+                <form action="/results" method="post">
                     <input type="text" id="filterString" name="filterString" style="display: none;">
                     <input type="submit" class="btn btn-animate btn-right" type="button" onclick="onSubmitButtonClick()" name="submit">
                 </form>      

@@ -5,5 +5,19 @@
 
 {% block body %}
 <table>
-    <t
+    {% for i in m %}
+    <tr>
+        {% for a in e %}
+        <th>{{ a }}</th>
+        {% endfor %}
+    </tr>
+    <tr>
+        {% for ie in i %}
+        <td>
+            {{ ie }}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
 </table>
+{% endblock %}

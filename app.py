@@ -26,17 +26,22 @@ def upload():
     else:        
         return render_template("upload.html", err=err)
 
-@app.route("/results", methods=['POST'])
-def results():
-    return render_template("results.html")
+#@app.route("/results", methods=['POST'])
+#def results():
+ #   return render_template("results.html")
     
 #@app.route("/results", methods=['POST'])
 #def results():
     
-@app.route('/handle_data', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def handle_data():
     filter = request.form.get('filterString')
     filters = filter.split(":")[:-1]
-    print(filters)
+    #print(filters)
+    m = main.query_db(filters)
+    print(m)
+    elements = ['Index', 'WorkOrder', 'PartNumber', 'PartDescription', 'ToolLocation', 'Comment1', 'Comment2', 'Comment3', 'PartTCs', 'PartProbes', 'OtherSensors']
+
+
     #Filter String will look like "Filter1:Filter2:Filter3" which can be parsed to create Sql String
-    return render_template("index.html", filterString = filter)
+    return render_template("results.html", filterString = filter, m=m, e=elements)
