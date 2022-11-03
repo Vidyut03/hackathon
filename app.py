@@ -35,6 +35,8 @@ def results():
     
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
-    filter = request.form['filterString']
+    filter = request.form.get('filterString')
+    filters = filter.split(":")[:-1]
+    print(filters)
     #Filter String will look like "Filter1:Filter2:Filter3" which can be parsed to create Sql String
     return render_template("index.html", filterString = filter)
