@@ -13,17 +13,16 @@ def create_connection(db):
     print('DB Connected')
   except Error as e:
     print('Error:',e)
-  
   return conn
 
 def process_files():
   for file in os.listdir('json-files/'):
-    process_file(conn, file)
+    process_file(file)
 
 def process_file(file):
   file = 'json-files/AC2-07337-anon.json'
   data = json.load(open(file))
-  add_to_db(conn, data, file)
+  add_to_db(data, file)
 
 def add_to_db(data, file):
   conn = create_connection(db)
