@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import json
+import main
 
 app = Flask(__name__)
 
@@ -19,6 +20,7 @@ def upload():
             err = "Error: File need to be of json format"
         else:
             a = json.load(f)
+            main.add_to_db(a, f.filename)
             # print(a)
         return render_template("upload.html", err=err)
     else:        
